@@ -134,11 +134,13 @@ html,
 body {
   height: 100%;
   background: black;
+  font-size: 62.5%;
 }
 .container {
+  width: 1300px;
   margin: 0 auto;
 }
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .container {
     Width: 100%;
   }
@@ -156,16 +158,71 @@ body {
   margin: 10px;
   color: gray;
   text-decoration: none;
+  font-size: 1.7rem;
+}
+.container .Intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .container img {
   max-height: 15%;
   max-width: 15%;
+  padding: 2rem;
 }
-.container p {
+.container .headings {
   color: white;
+  font-size: 5.5rem;
 }
-@media (max-width: 900px) {
-  .container p {
-    Width: 100%;
+.container .para {
+  color: white;
+  font-size: 1.5rem;
+}
+@media (max-width: 1300px) {
+  .container .para {
+    Width: 50%;
   }
+}
+.container .skills {
+  color: white;
+  font-size: 5.5rem;
+}
+.container .main-content {
+  display: flex;
+  justify-content: space-around;
+}
+.container ul {
+  color: white;
+  font-size: 1.5rem;
+  list-style-type: circle;
+  border: 1px solid white;
+}
+.container li {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid white;
+}
+.container ul li::before {
+  content: "\2022";
+  color: white;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.container .address {
+  color: white;
+  font-size: 1.5rem;
+}
+.container .work-history {
+  display: flex;
+  flex-direction: column;
+  background-color: #07a307;
+  border-radius: 2rem;
+}
+.container .work-history .main-section {
+  padding: 2rem;
+  width: 60rem;
+}
+.container .work-history .main-section .sub-heads {
+  font-size: 3rem;
 }

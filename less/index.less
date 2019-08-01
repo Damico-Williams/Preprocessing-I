@@ -59,10 +59,14 @@ html, body {
 	font-size:62.5%;
 }
 
+@common-color:white;
+@common-size:1.5rem;
+@second-sizing:3.0rem;
 
 .container {
-	margin: 0 auto;
-	@media (max-width:900px){
+	width: 1300px;
+	margin:0 auto;
+	@media (max-width:1300px){
 		Width:100%
 	}
 	
@@ -77,30 +81,94 @@ html, body {
 
 	a {
 	  padding:5px 20px;
-	  color: white;
+	  color:@common-color;
 	  margin:10px;
 	  color:gray;
 	  text-decoration: none;
+	  font-size:1.7rem;
 	}
 	
+    .Intro {
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+    .top-section {
+		
+	}
+
 	img {
 		max-height:15%;
 		max-width:15%;
+		padding:2.0rem;
 	}
 
-	h1{
-		color:white;
+	.headings {
+		color:@common-color;
+		font-size: 5.5rem;
 	}
 
-    p {
-	  color:white;
-	  @media (max-width:900px){
-		Width:100%
+    .para {
+	  color:@common-color;
+      font-size:@common-size;
+	  @media (max-width:1300px){
+		Width:50%
 	  }
 	}
 	
-	h2 {
-		font-size:2.5rem;
-		h1
+	.skills {
+		.headings();
 	}
+
+    .main-content {
+	   display:flex;
+	   
+	   justify-content: space-around;
+	}
+
+
+	ul {
+		color:@common-color;
+		font-size:@common-size;
+		list-style-type: circle;
+		border: 1px solid white;
+	}
+
+	li {
+		display:flex;
+		flex-direction: column;
+		border-bottom: 1px solid white
+	}
+
+	ul li::before {
+		content: "\2022";
+		color:@common-color;
+		display:inline-block;
+		width: 1em; 
+		margin-left: -1em;
+	  }
+
+	  .address {
+		  color:@common-color;
+		  font-size:@common-size;
+	  }
+
+	.work-history {
+		display:flex;
+		flex-direction: column;
+	    background-color:rgb(7, 163, 7);
+		border-radius: 2.0rem;
+	  
+	  .main-section {
+		padding:2.0rem;
+		width:60.0rem;
+	  
+		.sub-heads{
+           font-size:@second-sizing;
+		}
+	}
+  }
+
+
 }
