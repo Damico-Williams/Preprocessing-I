@@ -68,9 +68,8 @@ html, body {
 	width: 1300px;
 	margin:0 auto;
 	@media (max-width: 500px) {
-		Width:100%
-		
-	}
+		width:100%
+		}
 
 	nav {
 		display:flex;
@@ -78,7 +77,7 @@ html, body {
         @media (max-width: 500px) {
 			width:100%;
 			display:flex;
-			justify-content: flex-start;
+			justify-content: center;
 		}
 
 	}
@@ -93,8 +92,7 @@ html, body {
 	}
 	
     .Intro {
-		display:flex;
-		justify-content: space-around;
+		#box();
 		align-items: center;
 	}
 
@@ -102,16 +100,29 @@ html, body {
 		max-height:15%;
 		max-width:15%;
 		padding:2.0rem;
+		@media (max-width: 500px) {
+			max-height:50%;
+			max-width:50%;
+			}
 	}
 
 	.headings {
 		color:@common-color;
 		font-size:@heading-size;
+		@media (max-width: 500px) {
+			font-size:3.0rem;
+			padding-bottom: 1.0rem;
+			}
 	}
 
     .para {
 	  color:@common-color;
-      font-size:@common-size;
+	  font-size:@common-size;
+	  @media (max-width: 500px) {
+		width:95%;
+		padding-bottom: 1.0rem;
+		line-height: 2.5rem;
+		}
 	}
 	
 	.skills {
@@ -125,8 +136,7 @@ html, body {
 	}
 
     .main-content {
-	   display:flex;
-	   justify-content: space-around;
+	   #box();
 	}
 
 
@@ -178,5 +188,9 @@ html, body {
       background:none;
 }
 
+	#box {
+		display:flex;
+		justify-content: space-around;
+	}
 
 }
